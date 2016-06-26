@@ -1,0 +1,28 @@
+body {
+  margin: 0; }
+
+nav.navbar {
+  margin-bottom: 0; }
+
+#hero {
+  margin: 0;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  background-image: url("img/low-poly-1239778_1920.jpg");
+  background-attachment: fixed; }
+  #hero h1 {
+    padding-top: 200px; }
+
+#about {
+  background-color: #48543b;
+  height: 600px; }
+  #about #aboutContent {
+    background-color: #627250;
+    height: 600px; }
+
+#projects {
+  background-color: #6f815a;
+  height: 600px; }
+
+/*# sourceMappingURL=style.css.map */

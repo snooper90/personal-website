@@ -1,0 +1,38 @@
+$mainColor: #7C9065;
+
+body{
+  margin: 0;
+
+}
+
+
+nav.navbar{
+  margin-bottom: 0;
+}
+
+#hero {
+  margin: 0;
+  width:100%;
+  height: 600px;
+  text-align: center;
+  background-image: url('img/low-poly-1239778_1920.jpg');
+  background-attachment: fixed;
+  h1{
+
+    padding-top:200px;
+  }
+}
+
+#about{
+  background-color:darken($mainColor, 20%);
+  height: 600px;
+  #aboutContent{
+    background-color:darken($mainColor, 10%);
+    height: 600px;
+  }
+}
+
+#projects{
+  background-color:darken($mainColor, 5%);
+  height: 600px;
+}
