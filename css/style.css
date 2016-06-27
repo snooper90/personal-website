@@ -36,7 +36,17 @@ nav.navbar {
   #hero h1 {
     padding-top: 200px; }
 
-#squares {
+#hero-about-transition {
+  position: relative;
+  top: -80px;
+  background: ade-out(#23525a, 1);
+  background: -webkit-linear-gradient(rgba(35, 82, 90, 0), #23525a, rgba(35, 82, 90, 0));
+  background: -o-linear-gradient(rgba(35, 82, 90, 0), #23525a, rgba(35, 82, 90, 0));
+  background: -moz-linear-gradient(rgba(35, 82, 90, 0), #23525a, rgba(35, 82, 90, 0));
+  background: linear-gradient(rgba(35, 82, 90, 0), #23525a, rgba(35, 82, 90, 0));
+  height: 160px; }
+
+#about-projects-transition {
   position: relative;
   top: -80px;
   background: ade-out(#23525a, 1);
@@ -48,17 +58,23 @@ nav.navbar {
 
 #about {
   background-color: #2a636c;
-  height: 600px; }
+  height: 500px; }
   #about h2 {
     font-size: 38px;
     font-weight: bold;
     margin-bottom: 60px; }
   #about #aboutContent {
     background-color: #23525a;
-    height: 600px;
-    padding-top: 30px; }
+    height: 500px; }
+    #about #aboutContent div.row {
+      position: relative;
+      top: -80px;
+      height: 500px; }
     #about #aboutContent h3 {
       font-size: 30px; }
+
+#introduction {
+  padding-bottom: 20px; }
 
 #skill-list {
   list-style: none; }
@@ -66,5 +82,21 @@ nav.navbar {
 #projects {
   background-color: #1c4148;
   height: 600px; }
+
+@media only screen and (max-width: 992px) {
+  #about {
+    height: 450px; }
+    #about #aboutContent {
+      height: 450px; } }
+@media only screen and (max-width: 780px) {
+  #about {
+    height: 550px; }
+    #about #aboutContent {
+      height: 550px; } }
+@media only screen and (max-width: 480px) {
+  #about {
+    height: 600px; }
+    #about #aboutContent {
+      height: 600px; } }
 
 /*# sourceMappingURL=style.css.map */

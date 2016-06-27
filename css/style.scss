@@ -24,7 +24,7 @@ body{
 
 hr {
   margin-top: 30px;
-border-top: 4px double #8c8b8b;
+  border-top: 4px double #8c8b8b;
 	text-align: center;
   width:80%;
 }
@@ -58,13 +58,16 @@ nav.navbar{
   }
 }
 
-#squares{
+#hero-about-transition{
+  @include gradientTransition($mainColor,160px);
+}
+#about-projects-transition{
   @include gradientTransition($mainColor,160px);
 }
 
 #about{
   background-color:lighten($mainColor, 5%);
-  height: 600px;
+  height: 500px;
   h2{
     font-size: 38px;
     font-weight: bold;
@@ -72,12 +75,20 @@ nav.navbar{
   }
   #aboutContent{
     background-color:$mainColor;
-    height: 600px;
-    padding-top:30px;
+    height: 500px;
+
+    div.row{
+      position: relative;
+      top:-80px;
+      height:500px;
+    }
     h3{
       font-size: 30px;
     }
   }
+}
+#introduction{
+  padding-bottom: 20px;
 }
 #skill-list{
   list-style: none;
@@ -86,3 +97,37 @@ nav.navbar{
   background-color:darken($mainColor, 5%);
   height: 600px;
 }
+
+
+
+
+
+
+
+//md
+@media only screen and (max-width : 992px) {
+       #about{
+      height: 450px;
+      #aboutContent{
+        height: 450px;
+      }
+    }
+  }
+  //sm
+  @media only screen and (max-width : 780px) {
+    #about{
+      height: 550px;
+      #aboutContent{
+        height: 550px;
+      }
+    }
+  }
+  //xs
+  @media only screen and (max-width : 480px) {
+    #about{
+      height: 600px;
+      #aboutContent{
+        height: 600px;
+      }
+    }
+  }
