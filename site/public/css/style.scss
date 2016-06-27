@@ -14,6 +14,77 @@ $textColor: #95979f;
 
 }
 
+
+$bgDefault      : #2b2e3f;
+$bgHighlight    : #4f5265;
+$colDefault     : #ecf0f1;
+$colHighlight   : #cfd1db;
+$dropDown       : false;
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgHighlight;}}}}}
+    @if $dropDown {
+      .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+
 body{
   color:$textColor;
   margin: 0;
@@ -64,6 +135,9 @@ nav.navbar{
 #about-projects-transition{
   @include gradientTransition($mainColor,160px);
 }
+#projects-contact-transition{
+  @include gradientTransition($darkColor, 160px);
+}
 
 #about{
   background-color:lighten($mainColor, 5%);
@@ -95,9 +169,25 @@ nav.navbar{
 }
 #projects{
   background-color:darken($mainColor, 5%);
-  height: 600px;
+  height: 1200px;
 }
-
+#contact{
+  position: relative;
+  top:-160px;
+  background-color:$darkColor;
+  padding-top:80px;
+  height: 350px;
+}
+.project{
+  margin-top: 20px;
+}
+h3{
+  font-size: 30px;
+  text-decoration: underline;
+}
+img{
+  padding:10px 5px;
+}
 
 
 
@@ -112,6 +202,9 @@ nav.navbar{
         height: 450px;
       }
     }
+    #projects{
+      height:2900px;
+    }
   }
   //sm
   @media only screen and (max-width : 780px) {
@@ -120,6 +213,9 @@ nav.navbar{
       #aboutContent{
         height: 550px;
       }
+    }
+    #projects{
+      height:2450px;
     }
   }
   //xs
