@@ -1,10 +1,45 @@
-$mainColor: #7C9065;
+$mainColor: #23525a;
+$darkColor: #2b2e3f;
+$textColor: #95979f;
 
-body{
-  margin: 0;
+@mixin gradientTransition($colorOne,$height){
+  position: relative;
+  top: $height/-2;
+  background: ade-out($colorOne, 1);
+  background: -webkit-linear-gradient(fade-out($colorOne, 1), $colorOne, fade-out($colorOne, 1));
+  background: -o-linear-gradient(fade-out($colorOne, 1), $colorOne, fade-out($colorOne, 1));
+  background: -moz-linear-gradient(fade-out($colorOne, 1), $colorOne, fade-out($colorOne, 1));
+  background: linear-gradient(fade-out($colorOne, 1), $colorOne, fade-out($colorOne, 1));
+  height: $height;
 
 }
 
+body{
+  color:$textColor;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3em;
+  font-family: 'Kadwa', serif;
+}
+
+hr {
+  margin-top: 30px;
+border-top: 4px double #8c8b8b;
+	text-align: center;
+  width:80%;
+}
+hr:after {
+	content: 'Web Developer';
+  height:40px;
+  background-color:#333;
+  border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	top: -20px;
+	padding: 9px 10px;
+	color: lighten($textColor, 10%);
+	font-size: 18px;
+}
 
 nav.navbar{
   margin-bottom: 0;
@@ -23,15 +58,30 @@ nav.navbar{
   }
 }
 
-#about{
-  background-color:darken($mainColor, 20%);
-  height: 600px;
-  #aboutContent{
-    background-color:darken($mainColor, 10%);
-    height: 600px;
-  }
+#squares{
+  @include gradientTransition($mainColor,160px);
 }
 
+#about{
+  background-color:lighten($mainColor, 5%);
+  height: 600px;
+  h2{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  #aboutContent{
+    background-color:$mainColor;
+    height: 600px;
+    padding-top:30px;
+    h3{
+      font-size: 30px;
+    }
+  }
+}
+#skill-list{
+  list-style: none;
+}
 #projects{
   background-color:darken($mainColor, 5%);
   height: 600px;

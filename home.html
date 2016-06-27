@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/bootstrap.css" media="screen" charset="utf-8">
-  <link rel="stylesheet" href="css/  style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js
 " charset="utf-8"></script>
   <script src="js/bootstrap.js" charset="utf-8"></script>
@@ -36,29 +37,49 @@
   <div class="container-fluid" id="hero">
       <h1>Christopher Porter</h1>
       <hr>
-      <p>
-        <h4>Back End Skills</h4>
-        Node.js | Rails | Sails.js | PostgrSQL | MongoDB
-      </p>
-      <hr>
-      <p>
-        <h4>Front End Skills</h4>
-        SCSS | PUG | HTML5 | jQuery | Vanilla JS | EJS | Angular | React
-      </p>
+  </div>
+  <div class="col-xs-12" id="squares">
+    <div class="row">
+      <div class="col-sm-2 " id="square-one">
+        one
+      </div>
+      <div class="col-sm-4" id="square-two">
+        two
+      </div>
+      <div class="col-sm-4" id="square-three">
+        three
+      </div>
+      <div class="col-sm-2" id="square-four">
+        four
+      </div>
+    </div>
   </div>
   <div id="about">
-    <div class="container" id=aboutContent>
-      <h2>About me</h2>
-      <p>
-         <h3 class="text-center">Hi I am Christopher! </h3>
-        <p>
-          I'm a problem solver based in Austin TX. I'm most interested in full-stack web development with an emphasis on JavaScript. I am always more than ready to learn and try something new. I believe there is no failure as long as you continue to learn and grow from your mistakes.         I aim to be a jack of all trades and master of a few. I will rarely say no to working with or learning a new skill.
+    <div class="container" id="aboutContent">
 
+      <div class="row">
+        <div class="col-md-12">
+          <h3>About me</h3>
 
-        </p>
-      </p>
+        </div>
+        <div class="col-sm-6">
+           <h3 class="text-center">Hi I am Christopher! </h3>
+          <p>
+            I'm a problem solver based in Austin TX. I'm most interested in full-stack web development with an emphasis on JavaScript. I am always more than ready to learn and try something new. I believe there is no failure as long as you continue to learn and grow from your mistakes. I aim to be a jack of all trades and master of a few. I will rarely say no to working with or learning a new skill.
+          </p>
+        </div>
+      <div class="col-sm-6 text-center">
+        <h3>Here are a few of my skills</h3>
+        <ul id="skill-list">
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Rails</li>
+          <li>PostgreSQL</li>
+          <li>Angular</li>
+          <li>React</li>
+        </ul>
+      </div>
     </div>
-
   </div>
   <div id="projects">
     <div class="row">
@@ -121,7 +142,14 @@
 
   </div>
   <div id="contact">
-
+    <div class="">
+      <h4>Contact Me</h4>
+      <ul>
+        <li>LinkedIn</li>
+        <li>Githb</li>
+        <li>Email</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
