@@ -166,11 +166,28 @@ img {
       height: 550px; }
 
   #projects {
-    height: 2450px; } }
+    height: 2900px; } }
+@media only screen and (max-width: 670px) {
+  #about {
+    height: 750px; }
+    #about #aboutContent {
+      height: 750px; }
+
+  #projects {
+    height: 2600px; } }
+@media only screen and (max-width: 570px) {
+  #projects {
+    height: 2400px; } }
 @media only screen and (max-width: 480px) {
   #about {
-    height: 600px; }
+    height: 700px; }
     #about #aboutContent {
-      height: 600px; } }
+      height: 700px; }
+
+  #projects {
+    height: 2450px; } }
+@media only screen and (max-width: 380px) {
+  #projects {
+    height: 2200px; } }
 
 /*# sourceMappingURL=style.css.map */
