@@ -205,6 +205,9 @@ img{
     #projects{
       height:2900px;
     }
+    #about-projects-transition {
+      top:-135px;
+    }
   }
   //sm
   @media only screen and (max-width : 780px) {
@@ -217,6 +220,9 @@ img{
     #projects{
       height:2900px;
     }
+    #about-projects-transition {
+      top:-80px;
+    }
   }
   @media only screen and (max-width : 670px) {
     #about{
@@ -224,6 +230,7 @@ img{
       #aboutContent{
         height: 750px;
       }
+
     }
     #projects{
       height:2600px;

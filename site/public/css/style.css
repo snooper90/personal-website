@@ -158,7 +158,10 @@ img {
       height: 450px; }
 
   #projects {
-    height: 2900px; } }
+    height: 2900px; }
+
+  #about-projects-transition {
+    top: -135px; } }
 @media only screen and (max-width: 780px) {
   #about {
     height: 550px; }
@@ -166,7 +169,10 @@ img {
       height: 550px; }
 
   #projects {
-    height: 2900px; } }
+    height: 2900px; }
+
+  #about-projects-transition {
+    top: -80px; } }
 @media only screen and (max-width: 670px) {
   #about {
     height: 750px; }
